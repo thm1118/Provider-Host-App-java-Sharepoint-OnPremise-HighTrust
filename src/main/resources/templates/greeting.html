@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>SP Java Provider-host 测试</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p th:text="'SPHostUrl: ' + ${SPHostUrl} + ' '" />
+    <p th:text="'SPLanguage: ' + ${SPLanguage} + ' '" />
+    <p th:text="'SPClientTag: ' + ${SPClientTag} + ' '" />
+    <p th:text="'SPProductNumber: ' + ${SPProductNumber} + ' '" />
+
+    <p>点击测试链接</p>
+    <ol>
+        <li><a  href="http://sharepoint/sites/dev/_layouts/15/WopiFrame.aspx?sourcedoc=/sites/dev/Shared%20Documents/RFID.docx">Open a docx file host on sharepoint</a></li>
+        <li><a href="order/list.html" th:href="@{/order/list}">Order List</a></li>
+        <li><a href="subscribe.html" th:href="@{/subscribe}">Subscribe to our Newsletter</a></li>
+        <li><a href="userprofile.html" th:href="@{/userprofile}">See User Profile</a></li>
+    </ol>
+
+    <p th:text="'/_api/Web/lists : ' + ${listsResult} + ' '" />
+</body>
+</html>
